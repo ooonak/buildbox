@@ -78,7 +78,7 @@ apt-get install -q -y --no-install-recommends \
   libxinerama-dev libxkbcommon-dev libxkbcommon-x11-0 libxkbregistry0 \
   libxml2-dev libxmlsec1 libxmlsec1-openssl libxrandr-dev libxrender-dev \
   libxss-dev libxt-dev libxv-dev libxxf86vm-dev libyaml-dev libzstd-dev \
-  libaa1 linux-libc-dev-riscv64-cross linux-perf linux-perf-5.10 locales \
+  libaa1 lightdm linux-libc-dev-riscv64-cross linux-perf linux-perf-5.10 locales \
   lzop m17n-db makedumpfile mesa-common-dev meson minicom mtd-utils \
   mutter-common net-tools nfs-common nfs-kernel-server ninja-build \
   open-vm-tools p11-kit p11-kit-modules pango1.0-tools patchutils perl \
@@ -92,7 +92,7 @@ apt-get install -q -y --no-install-recommends \
   texinfo tmux tofrodos trace-cmd tree u-boot-tools unp unzip valgrind \
   vim wget x11proto-input-dev x11proto-randr-dev x11proto-scrnsaver-dev \
   x11proto-xf86vidmode-dev x11proto-xinerama-dev xdg-dbus-proxy xfce4 \
-  xfce4-goodies xterm xz-utils zstd
+  xfce4-goodies xinit xterm xz-utils zstd
 
 sudo apt-get autoremove --purge -y
 sudo apt-get clean -y
