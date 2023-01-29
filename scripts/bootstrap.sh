@@ -9,7 +9,7 @@ apt-get dist-upgrade -y
 
 # Install packages.
 # Formated with cat pkg.txt | tr " " "\n" | sort | uniq | tr "\n" " " | fmt | sed 's/$/ \\/' | sed 's/^/  /'
-sudo apt-get install -y --no-install-recommends \
+apt-get install -q -y --no-install-recommends \
   aptitude aptitude-common asciidoc automake binutils binutils-dev \
   binutils-riscv64-linux-gnu bison bmap-tools bpfcc-tools bubblewrap \
   build-essential busybox ccache chrpath clang clang-format \
@@ -34,7 +34,7 @@ sudo apt-get install -y --no-install-recommends \
   gnome-tweaks gnupg2 gparted gparted-common gperf graphviz \
   gstreamer1.0-pipewire gstreamer1.0-plugins-good help2man htop \
   icu-devtools ieee-data indent install-info iotop iputils-ping \
-  kdump-tools kernelshark keyutils libaccountsservice0 \
+  kernelshark keyutils libaccountsservice0 \
   libaio-dev libatk1.0-dev libatomic1-riscv64-cross libaudit-dev \
   libavc1394-0 libboost-iostreams1.74.0 libbpfcc libbrlapi0.8 \
   libbrotli-dev libc6-dev-riscv64-cross libc6-riscv64-cross libcacard0 \
