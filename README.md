@@ -13,4 +13,10 @@ $ vagrant up
 $ vagrant ssh
 ```
 
-Or just log in from VirtualBox.
+You should change the password for the vagrant user.
+
+```bash
+$ sudo passwd vagrant
+```
+
+And then just log in from VirtualBox.
