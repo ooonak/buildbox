@@ -34,7 +34,7 @@ sudo apt-get install -y --no-install-recommends \
   gnome-tweaks gnupg2 gparted gparted-common gperf graphviz \
   gstreamer1.0-pipewire gstreamer1.0-plugins-good help2man htop \
   icu-devtools ieee-data indent install-info iotop iputils-ping \
-  kdump-tools kernelshark kexec-tools keyutils libaccountsservice0 \
+  kdump-tools kernelshark keyutils libaccountsservice0 \
   libaio-dev libatk1.0-dev libatomic1-riscv64-cross libaudit-dev \
   libavc1394-0 libboost-iostreams1.74.0 libbpfcc libbrlapi0.8 \
   libbrotli-dev libc6-dev-riscv64-cross libc6-riscv64-cross libcacard0 \
