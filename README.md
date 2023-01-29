@@ -19,4 +19,8 @@ You should change the password for the vagrant user.
 $ sudo passwd vagrant
 ```
 
-And then just log in from VirtualBox.
+And then just log in from VirtualBox and start the init script.
+
+```bash
+$ sh ./initialize.sh
+```
