@@ -1,10 +1,15 @@
 #!/bin/sh
 
+# Configure locale time and keyboard layout
+sudo timedatectl set-timezone Europe/Copenhagen
+sudo dpkg-reconfigure keyboard-configuration
+
 # Export environment variables
+echo "" >> $HOME/.bashrc
 echo "export LC_ALL=en_DK.UTF-8" >> $HOME/.bashrc
 echo "export LANG=en_DK.UTF-8" >> $HOME/.bashrc
 echo "export LANGUAGE=en_DK.UTF-8" >> $HOME/.bashrc
-
+echo "" >> $HOME/.bashrc
 echo "export EDITOR=vim" >> $HOME/.bashrc
 
 # Get vimrc
@@ -18,8 +23,3 @@ cd
 echo ""
 echo "Remember to open vim and execute :PluginInstall"
 echo ""
-
-# Download LFC setup script, has all the stuff one needs for development
-wget http://bit.ly/LFready -O ready-for.sh
-chmod 755 ready-for.sh
-
