@@ -1,4 +1,4 @@
 config:
   VM_CORES: 4
   VM_MEMORY: 8192
-  SHARED_FOLDER: "/run/media/swu/e35ed19c-6585-4659-9fa7-5b1f89126bd5"
+  SHARED_FOLDER: "~/yocto-work"

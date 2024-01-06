@@ -9,11 +9,10 @@ config = YAML.load_file("#{current_dir}/config.yaml")
 vagrant_config = config['config']
 
 Vagrant.configure("2") do |config|
-  config.vm.box = "debian/bullseye64"
+  config.vm.box = "debian/bookworm64"
 
   config.vm.define "buildbox"
   config.vm.hostname = "buildbox"
-  #config.disksize.size = "200GB"
 
   config.vm.provider "virtualbox" do |v|
     v.name = "BuildBox"
@@ -21,7 +20,6 @@ Vagrant.configure("2") do |config|
     v.memory = vagrant_config['VM_MEMORY']
     v.gui = true
 
-    #required_plugins = %w( vagrant-vbguest vagrant-disksize )
     required_plugins = %w( vagrant-vbguest )
 		required_plugins.each do |plugin|
 		  system "vagrant plugin install #{plugin}" unless Vagrant.has_plugin? plugin
