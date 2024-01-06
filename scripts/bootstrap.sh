@@ -59,4 +59,5 @@ sed -i 's/^# *\(en_DK.UTF-8\)/\1/' /etc/locale.gen
 locale-gen
 
 chown -R vagrant:vagrant scripts
-chmod -R 0750 scripts
+chmod 0750 scripts
+chmod 0750 scripts/*.sh

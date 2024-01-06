@@ -26,8 +26,8 @@ Vagrant.configure("2") do |config|
 		end
   end
 
-  config.vm.provision "shell", privileged: true, path: "scripts/bootstrap.sh"
-  config.vm.provision "file", source: "scripts", destination: "$HOME/scripts"
+  config.vm.provision "files", type: "file", source: "scripts", destination: "$HOME/scripts", run: "always"
+  config.vm.provision "bootstrap", type: "shell", privileged: true, path: "scripts/bootstrap.sh"
   config.vm.synced_folder vagrant_config['SHARED_FOLDER'], '/home/vagrant/share'
 end
 

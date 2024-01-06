@@ -1,5 +1,21 @@
 # BuildBox
 
+## Issue
+For some reason first invocation of 'vagrant up' never ends. I believe it's
+caused by VirtualBox Guest Additions.
+
+"Guest Screen Resize) were not restarted automatically"
+
+The following fix works.
+
+```bash
+$ vagrant ssh
+$ sudo reboot
+$ vagrant up
+# For some reason it seems that GuestAdditions is not started if we dont run reload.
+$ vagrant reload
+```
+
 ## Create VirtualBox VM with Vagrant
 
 ### Provision
