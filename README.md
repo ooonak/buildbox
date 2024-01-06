@@ -1,12 +1,20 @@
 # BuildBox
 
-## VirtualBox by Vagrant
+## Create VirtualBox VM with Vagrant
+
+### Provision
+
 Creates a VirtualBox machine with Debian 12 Bookworm 64-bit, provisioned
-for kernel development, Yocto, Buildroot and stuff like that :-)
+for Yocto, Buildroot, kernel development.
 
-Assuming you have vagrant installed.
+Assuming you have vagrant installed. Maybe you need to update your plugins.
 
-First edit config.yaml to set resources and shared folder.
+```bash
+$ vagrant plugin update
+$ vagrant plugin install vagrant-vbguest
+```
+
+First edit config.yaml to set resources and shared folder. Then provision machine.
 
 ```bash
 $ vagrant up
@@ -23,4 +31,12 @@ And then just log in from VirtualBox and start the init script.
 
 ```bash
 $ sh ./initialize.sh
+```
+
+### Usage
+
+Start the container and
+```bash
+$ vagrant up
+$ vagrant ssh
 ```
