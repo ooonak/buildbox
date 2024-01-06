@@ -27,8 +27,7 @@ Vagrant.configure("2") do |config|
   end
 
   config.vm.provision "shell", privileged: true, path: "scripts/bootstrap.sh"
-  config.vm.provision "file", source: "scripts/initialize.sh", destination: "initialize.sh"
-  config.vm.provision "file", source: "scripts/git-prompt.sh", destination: "/usr/share/git/completion/git-prompt.sh"
-  config.vm.synced_folder vagrant_config['SHARED_FOLDER'], '/home/vagrant/shared'
+  config.vm.provision "file", source: "scripts", destination: "$HOME/scripts"
+  config.vm.synced_folder vagrant_config['SHARED_FOLDER'], '/home/vagrant/share'
 end
 

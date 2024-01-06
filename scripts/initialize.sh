@@ -15,8 +15,8 @@ echo "export EDITOR=vim" >> $HOME/.bashrc
 # Enable Git prompt
 echo "" >> $HOME/.bashrc
 echo "# https://wiki.archlinux.org/title/Git" >> $HOME/.bashrc
-echo "if test -f /usr/share/git/completion/git-prompt.sh; then" >> $HOME/.bashrc
-echo "  source /usr/share/git/completion/git-prompt.sh 2>&1 /dev/null" >> $HOME/.bashrc
+echo "if test -f $HOME/scripts/git-prompt.sh; then" >> $HOME/.bashrc
+echo "  source $HOME/scripts/git-prompt.sh 2>&1 /dev/null" >> $HOME/.bashrc
 echo "  export GIT_PS1_SHOWSTASHSTATE=true" >> $HOME/.bashrc
 echo "  export GIT_PS1_SHOWDIRTYSTATE=true" >> $HOME/.bashrc
 echo "  export GIT_PS1_SHOWUNTRACKEDFILES=true" >> $HOME/.bashrc

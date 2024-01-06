@@ -58,6 +58,5 @@ sed -i 's/^# *\(en_US.UTF-8\)/\1/' /etc/locale.gen
 sed -i 's/^# *\(en_DK.UTF-8\)/\1/' /etc/locale.gen
 locale-gen
 
-sudo chown root:root /usr/share/git/completion/git-prompt.sh
-sudo chmod 0755 /usr/share/git/completion/git-prompt.sh
-
+chown -R vagrant:vagrant scripts
+chmod -R 0750 scripts
