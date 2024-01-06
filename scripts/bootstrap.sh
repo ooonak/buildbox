@@ -1,6 +1,6 @@
 #!/bin/sh
 
-INSTALL_LFD_DEPENDENCIES=false
+INSTALL_LFD_DEPENDENCIES=true
 
 # Expand filesystem to whole partition.
 resize2fs /dev/sda1
@@ -12,7 +12,7 @@ apt-get dist-upgrade -y
 # Please sort packages in alphabetic order $ tr ' ' '\n' < /tmp/to-sort | sort | uniq | tr '\n' ' '
 
 # Common
-apt-get install -q -y --no-install-recommends \
+apt-get install -q -y \
   autoconf automake autotools-dev bc binutils-dev clang clang-format clang-tidy cmake cscope exuberant-ctags gdb \
   git htop mold ninja-build screen tmux tree u-boot-tools unp unzip uuid-dev vim vim-runtime zstd
 
@@ -32,6 +32,8 @@ apt-get install -q -y --no-install-recommends \
 if [ "$INSTALL_LFD_DEPENDENCIES" = "true" ]; then
 # LFD courses dependencies
 # wget https://training.linuxfoundation.org/cm/prep/ready-for.sh
+
+apt-get -q -y --no-install-recommends install task-kde-desktop
 
 # LFD420: Linux Kernel Internals and Development
 apt-get -q -y --no-install-recommends install \

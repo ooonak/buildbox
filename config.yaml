@@ -1,4 +1,4 @@
 config:
   VM_CORES: 4
   VM_MEMORY: 8192
-  SHARED_FOLDER: "~/yocto-work"
+  SHARED_FOLDER: "~/share"
